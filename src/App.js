@@ -9,18 +9,15 @@ function App() {
   const APP_ID = "c22b125c"                   
   const APP_KEY = "e908f59031d64f42a5c926642c7296a4"
 
-  
+
   const[recipes, setRecipes] = useState([])
   const[search, setSearch] = useState("pizza")
   const[query, setQuery] = useState("pizza")
 
   useEffect(function()
   {
-    console.log("run1st")
-    getRecipes()
-  },[query])
 
-  const getRecipes = async function()
+    const getRecipes = async function()
   {
     console.log(APP_ID + " and "+ APP_KEY )
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
@@ -29,6 +26,10 @@ function App() {
     setRecipes(data.hits)
     console.log(data.hits)
   }
+  getRecipes()
+  },[query])
+
+  
 
   const updateSearch = function(e)
   {
