@@ -8,8 +8,8 @@ function Recipe(props)
             </div>
             <div className="ingredient-box">
                     <ul className="list">
-                    {props.ingredients.map(function(ingridient){
-                        return <li className="ingredient">
+                    {props.ingredients.map(function(ingridient,index){
+                        return <li className="ingredient" key={index}>
                         {ingridient}
                         </li>
                     }
