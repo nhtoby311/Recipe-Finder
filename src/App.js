@@ -6,8 +6,8 @@ import Recipe from './components/Recipe'
 function App() {
 
   
-  const APP_ID = process.env.REACT_APP_APP_ID              
-  const APP_KEY = process.env.REACT_APP_APP_KEY
+  //const APP_ID = process.env.REACT_APP_APP_ID              
+  //const APP_KEY = process.env.REACT_APP_APP_KEY
 
 
   const[recipes, setRecipes] = useState([])
